@@ -47,7 +47,7 @@ async def process_query_endpoint(request: QueryRequest):
     )
 
 # Only for local testing
-if _name_ == "_main_":
+if __name__ == "_main_":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))  # Render sets PORT env var
     uvicorn.run("main:app", host="0.0.0.0", port=port, reload=True)
